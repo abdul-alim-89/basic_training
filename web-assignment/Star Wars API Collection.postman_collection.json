@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "0551d1a9-c73b-4bfa-b3ce-d818d57fcf12",
+		"name": "Star Wars API Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "57965870",
+		"_collection_link": "https://aalim-4285b64c-9475377.postman.co/workspace/Abdul-Alim's-Workspace~caebf728-7bfc-475d-8a06-3e92dd43646f/collection/57965870-0551d1a9-c73b-4bfa-b3ce-d818d57fcf12?action=share&source=collection_link&creator=57965870"
+	},
+	"item": [
+		{
+			"name": "People",
+			"item": [
+				{
+					"name": "Get All People",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/people/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"people",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Person By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/people/1/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"people",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get People By Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/people/?search=darth",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"people",
+								""
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "darth"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "People Schema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.info/api/people/schema",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"info"
+							],
+							"path": [
+								"api",
+								"people",
+								"schema"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Films",
+			"item": [
+				{
+					"name": "Get All Films",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/films/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"films",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Film By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/films/5",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"films",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Film Schema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.info/api/films/schema",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"info"
+							],
+							"path": [
+								"api",
+								"films",
+								"schema"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Planets",
+			"item": [
+				{
+					"name": "Get All Planets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/planets/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"planets",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Planet By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/planets/1/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"planets",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Planet Wookiee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/planets/1/?format=wookiee",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"planets",
+								"1",
+								""
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "wookiee"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Planets Schema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.info/api/planets/schema",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"info"
+							],
+							"path": [
+								"api",
+								"planets",
+								"schema"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Starships",
+			"item": [
+				{
+					"name": "Get All Starships",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/starships/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"starships",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Starship By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/starships/9/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"starships",
+								"9",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Starships Schema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.info/api/starships/schema",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"info"
+							],
+							"path": [
+								"api",
+								"starships",
+								"schema"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vehicles",
+			"item": [
+				{
+					"name": "Get All Vehicles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/vehicles/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"vehicles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vehicles By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/vehicles/4/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"vehicles",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicles Schema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.info/api/vehicles/schema",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"info"
+							],
+							"path": [
+								"api",
+								"vehicles",
+								"schema"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Species",
+			"item": [
+				{
+					"name": "Get All Species",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/species/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"species",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Species By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.dev/api/species/3/",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"dev"
+							],
+							"path": [
+								"api",
+								"species",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Species Schema",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://swapi.info/api/species/schema",
+							"protocol": "https",
+							"host": [
+								"swapi",
+								"info"
+							],
+							"path": [
+								"api",
+								"species",
+								"schema"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Root",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
