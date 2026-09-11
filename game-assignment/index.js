@@ -136,7 +136,7 @@ const games = {
 //     this.game_over();
 //     return;
 //     }
-      console.log(games);
+     // console.log(games);
        this.update_board();
 
        const question_section = document.getElementById("dispaly-question");
@@ -212,14 +212,14 @@ if (progress > 50) {
 
     },
     checkans: function(ind, button){
-        console.log(button);
+        //console.log(button);
          const buttons = document.querySelectorAll(".answer-btn");
          buttons.forEach(function(btn) {
         //      if (btn !== button) {
         //     btn.disabled = true;
             // console.log(btn);
         // }
-        console.log(btn)
+       // console.log(btn)
        btn.setAttribute("disabled", "true");
         btn.classList.remove("correct", "incorrect");
     });
