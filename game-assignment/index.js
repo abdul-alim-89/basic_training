@@ -214,6 +214,7 @@ if (progress > 50) {
     },
     checkans: function(ind, button){
         try{
+          //  console.log("check game this", this === games)
         //console.log(button);
          const buttons = document.querySelectorAll(".answer-btn");
          buttons.forEach(function(btn) {
@@ -354,4 +355,6 @@ catch(err){
 
 games.init();
 games.button_event();
+
+
 
