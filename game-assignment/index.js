@@ -9,6 +9,7 @@ const games = {
     timer_id: null,
     interval_id: null,
     displayQuestion: [],
+    questions1: [],
     questions: [
     {
         question: "Which command is used to create a new Git repository?",
@@ -86,7 +87,12 @@ const games = {
     start_game: function(){
        
        try{
-          this.nextQuestion();
+        if(this.questions.length === 0)
+        {
+            this.error("No questions are available right now. Please try again later.");
+            return;
+        }
+        this.nextQuestion();
         document.getElementById("start-screen").style.display = "none";
        document.getElementById("game-screen").style.display = "block";
          
@@ -102,6 +108,11 @@ const games = {
     },
     nextQuestion: function(){
         try{
+
+        if(this.questions.length == 0){
+             this.error("No questions are available right now. Please try again later.");
+            return;
+        }
        //console.log("curent", this.displayQuestion)
        clearTimeout(this.timer_id);
        clearTimeout(this.interval_id);
@@ -147,7 +158,7 @@ const games = {
                 <div class="question-option">
                     <ul>`;
                     single_question.options.map((option, index)=>{
-                        question_html += `<li><button onclick=games.checkans(${index},this);>${option}</button></li>`;
+                        question_html += `<li><button class="answer-btn" onclick=games.checkans(${index},this);>${option}</button></li>`;
                     })
                     
                     question_html += `</ul>
@@ -204,6 +215,12 @@ if (progress > 50) {
         console.log(button);
          const buttons = document.querySelectorAll(".answer-btn");
          buttons.forEach(function(btn) {
+        //      if (btn !== button) {
+        //     btn.disabled = true;
+            // console.log(btn);
+        // }
+        console.log(btn)
+       btn.setAttribute("disabled", "true");
         btn.classList.remove("correct", "incorrect");
     });
     const get_single_question = this.questions[this.current_question];
@@ -211,23 +228,20 @@ if (progress > 50) {
         button.classList.add("correct");
         //alert("correct");
         this.score++;
-        setTimeout(() => {
-            this.nextQuestion();
-        }, 500);
-        
-        
+      
     }
     else{
         //alert("wrong");
          button.classList.add("incorrect");
         this.current_lives--;
-        setTimeout(() => {
-            this.nextQuestion();
-        }, 500);
-        
+       
     }
+    setTimeout(() => {
+        this.nextQuestion();
+    }, 500);
     },
     update_board: function(){
+      
   const lives = document.getElementById("lives");
   const score = document.getElementById("score");
   const question_time = document.getElementById("question-timer");
@@ -292,8 +306,13 @@ this.init();
     },
     error: function(msg){
        const error = document.getElementById("error-content");
+       const alertbox = document.getElementsByClassName("alert")[0];
        error.innerHTML = msg;
-      document.getElementsByClassName("alert")[0].style.display = "block";
+      alertbox.style.display = "block";
+      setTimeout(()=>{
+alertbox.style.display = "none";
+      },5000)
+
     }
 }
 

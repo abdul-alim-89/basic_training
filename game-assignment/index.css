@@ -37,7 +37,6 @@ section {
     justify-content: center;
     align-items: center;
     padding: 10px 20px;
-    min-height: 70vh;
 }
 
 
@@ -394,6 +393,7 @@ button:active {
   cursor:pointer;
   text-align: center;
   display: none;
+  
 }
 
 .closebtn {
@@ -409,4 +409,11 @@ button:active {
 
 .closebtn:hover {
   color: black;
+}
+.game-main-section{
+        padding: 0px 18px;
+}
+.answer-btn[disabled] {
+    pointer-events: none; 
+    cursor: not-allowed;  
 }
