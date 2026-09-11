@@ -9,7 +9,8 @@ const games = {
     timer_id: null,
     interval_id: null,
     displayQuestion: [],
-    questions: [
+    questions: [],
+    questions1: [
     {
         question: "Which command is used to create a new Git repository?",
         options: ["git start", "git init", "git create", "git new"],
@@ -86,7 +87,12 @@ const games = {
     start_game: function(){
        
        try{
-          this.nextQuestion();
+        if(this.questions.length === 0)
+        {
+            this.error("No questions are available right now. Please try again later.");
+            return;
+        }
+        this.nextQuestion();
         document.getElementById("start-screen").style.display = "none";
        document.getElementById("game-screen").style.display = "block";
          
@@ -102,6 +108,11 @@ const games = {
     },
     nextQuestion: function(){
         try{
+
+        if(this.questions.length == 0){
+             this.error("No questions are available right now. Please try again later.");
+            return;
+        }
        //console.log("curent", this.displayQuestion)
        clearTimeout(this.timer_id);
        clearTimeout(this.interval_id);
@@ -228,6 +239,7 @@ if (progress > 50) {
     }
     },
     update_board: function(){
+      
   const lives = document.getElementById("lives");
   const score = document.getElementById("score");
   const question_time = document.getElementById("question-timer");
