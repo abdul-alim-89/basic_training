@@ -9,7 +9,7 @@ const games = {
     timer_id: null,
     interval_id: null,
     displayQuestion: [],
-    questions1: [],
+  //  questions1: [],
     questions: [
     {
         question: "Which command is used to create a new Git repository?",
@@ -73,6 +73,7 @@ const games = {
         const lives = document.getElementById("lives");
         this.current_lives = this.max_lives;
         lives.innerHTML = this.current_lives;
+        // this.button_event();
        
     },
     button_event: function(){
@@ -212,6 +213,7 @@ if (progress > 50) {
 
     },
     checkans: function(ind, button){
+        try{
         //console.log(button);
          const buttons = document.querySelectorAll(".answer-btn");
          buttons.forEach(function(btn) {
@@ -239,9 +241,14 @@ if (progress > 50) {
     setTimeout(() => {
         this.nextQuestion();
     }, 500);
+}
+catch(err){
+    console.log(err.message);
+     this.error("Something went wrong. Please try again.");
+}
     },
     update_board: function(){
-      
+    try{  
   const lives = document.getElementById("lives");
   const score = document.getElementById("score");
   const question_time = document.getElementById("question-timer");
@@ -257,10 +264,15 @@ document.getElementById("question-length").innerHTML =
         `100%`
     );
     timer_progress.style.setProperty("--progress-color", "#22c55e");
-
+    }
+    catch(err){
+        console.log(err.message);
+         this.error("Something went wrong. Please try again.");
+    }
 
     },
     reset_game: function(){
+        try{
         this.score = 0;
         this.current_question=null;
         this.displayQuestion = [];
@@ -270,10 +282,16 @@ document.getElementById("question-length").innerHTML =
         this.timer_id=null;
         this.current_lives=0;
         this.update_board();
+        }
+catch(err){
+        console.log(err.message);
+         this.error("Something went wrong. Please try again.");
+    }
 
 
     },
     win_game: function(){
+        try{
        //alert("win game")
         document.getElementById("start-screen").style.display = "none";
        document.getElementById("game-screen").style.display = "none";
@@ -285,8 +303,15 @@ document.getElementById("question-length").innerHTML =
     document.getElementById("w-l-score").innerHTML = this.score;
 
        this.reset_game();
+        }
+       catch(err){
+        console.log(err.message);
+         this.error("Something went wrong. Please try again.");
+    }
+
     },
     game_over:function(){
+        try{
         //alert("gameover")
         document.getElementById("start-screen").style.display = "none";
        document.getElementById("game-screen").style.display = "none";
@@ -298,10 +323,21 @@ document.getElementById("question-length").innerHTML =
     end_screen.classList.add("lose-game");
     document.getElementById("w-l-score").innerHTML = this.score;
         this.reset_game();
+    }
+        catch(err){
+        console.log(err.message);
+         this.error("Something went wrong. Please try again.");
+    }
+
     },
     play_again: function(){
-
-this.init();
+    try{
+    this.init();
+    }
+    catch(err){
+        console.log(err.message);
+        this.error("Something went wrong. Please try again.");
+    }
 
     },
     error: function(msg){
@@ -310,7 +346,7 @@ this.init();
        error.innerHTML = msg;
       alertbox.style.display = "block";
       setTimeout(()=>{
-alertbox.style.display = "none";
+       alertbox.style.display = "none";
       },5000)
 
     }
