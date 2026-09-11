@@ -1,0 +1,40 @@
+@media (max-width: 600px) {
+
+    body > h2 {
+        font-size: 24px;
+    }
+
+    .section-container {
+        width: 94%;
+    }
+
+    .start-game-con {
+        padding: 40px 25px;
+    }
+
+    .start-game-con h3 {
+        font-size: 30px;
+    }
+
+    .game-screen-con {
+        padding: 20px;
+    }
+
+    .game-top p {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .question-tile {
+        font-size: 20px;
+        padding: 20px 15px;
+    }
+
+    .question-option ul {
+        grid-template-columns: 1fr;
+    }
+
+    .end-screen-con {
+        padding: 40px 25px;
+    }
+}

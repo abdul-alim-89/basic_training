@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ninja Trivia Arena</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./index.css">
+<link rel="stylesheet" href="./responsive.css">
+</head>
+<body>
+
+<h2>Ninja Trivia Arena</h2>
+<div class="game-main-section">
+<section id="start-screen">
+<div class="section-container">
+    <div class="start-game-con">
+        <h3>Welcom to <br>Ninja Trivia Arena</h3>
+        <button id="start-btn">Start</button>
+    </div>
+</div>
+</section>
+<section id="game-screen">
+    <div class="section-container">
+        <div class="game-screen-con">
+            <div class="game-top">
+                <p>Score : <span id="score">0</span></p>
+                <p id="question-length">0/0</p>
+                <p>lives : <span id="lives">0</span></p>
+            </div>
+            <p id="question-timer">0:00:15</p>
+            <div id="timer-progress"></div>
+            <div id="dispaly-question">
+            <!-- <div class="question-sec">
+                <div class="question-tile">This is test question</div>
+                <div class="question-option">
+                    <ul>
+                        <li><button>Option1</button></li>
+                        <li><button>Option2</button></li>
+                        <li><button>Option3</button></li>
+                        <li><button>Option4</button></li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+        </div>
+    </div>
+</section>
+<section id="end-screen">
+    <div class="section-container">
+        <div class="end-screen-con">
+            <div class="win-content">
+            <div class="end-icon">🏆</div>
+            <div class="end-title">Congratulations!</div>
+            <p class="end-msg">You Won the Game!</p>
+            </div>
+            <div class="lose-content">
+            <div class="end-icon">🎮</div>
+            <div class="end-title">Game Over!</div>
+            <p class="end-msg">Try Again!</p>
+            </div>
+            <div class="w-l-sec">Score <span id="w-l-score">5</span></div>
+            <button id="playagain">Play Again</button>
+
+        </div>
+    </div>
+</section>
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <p id="error-content"><strong>Danger!</strong> Indicates a dangerous or potentially negative action.</p>
+</div>
+</div>
+<script src="./index.js"></script>
+</body>
+</html>
